@@ -2,12 +2,15 @@
 
 <br />
 
-Prueba Técnica WordPress para Upturn Rentals
-============================================
+# Prueba Técnica WordPress para Upturn Rentals
 
-El objetivo de esta prueba técnica no es principalmente evaluar los conocimientos del candidato, sino la capacidad de aprender y buscar información y documentación en internet sobre un tema, así como la capacidad de comunicar con el equipo, si es el caso, la necesidad de ayuda o dudas para poder avanzar en la tarea.
+
+El objetivo de esta prueba técnica no es evaluar tus conocimientos previos, sino la capacidad de aprender, buscar información y documentación en internet sobre un tema. 
+Así como la capacidad de comunicar con el equipo, si es el caso, la necesidad de ayuda o dudas para poder avanzar en la tarea.
 
 Por este motivo te animo a contactar conmigo para cualquier duda o si te quedas encallado en cualquiera de los puntos.
+
+<br>
 
 * * *
 
@@ -21,13 +24,24 @@ El objetivo es instalar y configurar un website con el CMS WordPress, instalar e
 
 1.  Instalar un WordPress en tu entorno local  
     http://localhost
-2.  En la carpeta \\wp-content\\themes de tu WordPress clonar este repositorio  
-    `> cd \wp-content\themes   > git clone https://github.com/josepest/test-repo.git   `
+2.  En la carpeta \\wp-content\\themes de tu WordPress local, clonar este repositorio  
+
+
+```sh
+cd \wp-content\themes   
+git clone https://github.com/josepest/pt-wordpress-cpt
+```
+
+    
 3.  Activa el tema understrap-child en tu wordpress.
-4.  Crea una nueva rama en el repositorio de git con tu nombre.
-5.  Programa las acciones y pasos detallados en el punto 3 para tener la solución a esta prueba.
-6.  Una vez tengas la solución, envíame un email para revisar la solución conjuntamente.
-7.  Cualquier pregunta no dudes en contactar.
+4.  Crea una nueva rama git en el repositorio git con tu nombre.
+5.  Programa las acciones y pasos detallados en los puntos posteriores para tener la solución a esta prueba, siempre realizando los commits en la rama de git creada por ti con tu nombre.
+6.  Una vez tengas la solución, realiza un push a este repositorio de github.
+7.  Envíame un email para revisar la solución conjuntamente, o realiza un pull request.
+
+<br />
+
+Por favor, si una vez lida toda la documentación tienes cualquier pregunta o te quedas en callado en cualquiera de los puntos, no dudes en contactar. 🙏
 
 <br />
 
