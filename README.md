@@ -37,7 +37,7 @@ git clone https://github.com/josepest/pt-wordpress-cpt
 4.  Crea una nueva rama git en el repositorio git con tu nombre.
 5.  Programa las acciones y pasos detallados en los puntos posteriores para tener la solución a esta prueba, siempre realizando los commits en la rama de git creada por ti con tu nombre.
 6.  Una vez tengas la solución, realiza un push a este repositorio de github.
-7.  Envíame un email para revisar la solución conjuntamente, o realiza un pull request.
+7.  Envíame un email para revisar la solución conjuntamente, o realiza una pull request.
 
 <br />
 
