@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba Técnica Wordpress | Upturn Rentals</title>
+  </head>
+  <body>
+    <img
+      src="https://www.upturnrentals.com/assets/img/logo.png"
+      width="190"
+      alt="Upturn Rentals Logo"
+    />
+    <h1>Prueba Técnica WordPress para Upturn Rentals</h1>
+
+    <p>
+      El objetivo de esta prueba técnica no es principalmente evaluar los
+      conocimientos del candidato, sino la capacidad de aprender y buscar
+      información y documentación en internet sobre un tema, así como la
+      capacidad de comunicar con el equipo, si es el caso, la necesidad de ayuda
+      o dudas para poder avanzar en la tarea.
+    </p>
+    <p>
+      Por este motivo te animo a contactar conmigo para cualquier duda o si te
+      quedas encallado en cualquiera de los puntos.
+    </p>
+
+    <hr />
+
+    <h3>OBJETIVO</h3>
+    <p>
+      El objetivo es instalar y configurar un website con el CMS WordPress,
+      instalar el tema Understrap como tema padre y el tema hijo Understrap
+      child. Utilizar este tema hijo activo para generar un shortcode que
+      muestre un listado de Custom Post Types que habremos definido previamente.
+      Generar una página en la web donde se use este shortcode y se muestre
+      estos datos por pantalla de una forma responsive (Visible correctamente en
+      Desktop, tablet y movil).
+    </p>
+
+    <p>&nbsp;</p>
+
+    <h3>PASOS</h3>
+    <ol>
+      <li>
+        Instalar un WordPress en tu entorno local
+        <br />
+        http://localhost
+      </li>
+      <li>
+        En la carpeta \wp-content\themes de tu WordPress clonar este repositorio
+        <br />
+        <code>
+          cd \wp-content\themes<br />
+          clone https://github.com/josepest/test-repo.git<br />
+        </code>
+      </li>
+
+      <li>Activa el tema understrap-child en tu wordpress.</li>
+
+      <li>Crea una nueva rama en el repositorio de git con tu nombre.</li>
+      <li>
+        Programa las acciones y pasos detallados en el punto 3 para tener la
+        solución a esta prueba.
+      </li>
+      <li>
+        Una vez tengas la solución, envíame un email para revisar la solución
+        conjuntamente.
+      </li>
+      <li>Cualquier pregunta no dudes en contactar.</li>
+    </ol>
+
+    <p>&nbsp;</p>
+
+    <h3>DETALLES</h3>
+
+    <b>Entorno de desarrollo:</b>
+    <p>Lo primero es preparar un entorno local de desarrollo web.</p>
+    <ul>
+      <li>Servidor web (Apache) que sea capaz de ejecutar PHP,</li>
+      <li>Servidor de base de datos MySQL</li>
+      <li>IDE para programar (Visual Studio Code, PhpStorm, …)</li>
+    </ul>
+    <p>Tienes en el apartado recursos enlaces de ayuda para preparar esto.</p>
+    <p>
+      Al final de este punto deberías poder ver una página web local en:<br />
+      http://localhost
+    </p>
+
+    <p>&nbsp;</p>
+
+    <b>Instalación WordPress:</b>
+    <p>
+      Utilizar los recursos de abajo para instalar un WordPress en tu entorno
+      local de desarrollo. Archivos y Base de datos.
+    </p>
+    <p>
+      Al final de este punto deberías poder ver una página web WordPress local
+      en:<br />
+      http://localhost
+    </p>
+
+    <p>&nbsp;</p>
+
+    <b>Instalación Tema Understrap y Understrap-child:</b>
+    <p>
+      Understrap es un tema base muy utilizado por programadores, ya que permite
+      una fácil personalización, y lleva configurada una estructura base de
+      programación con composer, npm con scripts para optimización para el
+      frontend, así como la librería frontend Bootstrap.
+    </p>
+    <p>
+      Este repositorio lleva el código del tema padre e hijo Understrap e
+      Understrap-child, deberás clonar este repositorio directamente en la
+      carpeta \wp-content\themes de tu instalación de Wordpress.
+    </p>
+    <p>
+      Una vez clonados, activa la plantilla Understrap-child en tu Wordpress.
+    </p>
+    <p>
+      Esta Understrap-child será la que utilizaremos para realizar todas las
+      personalizaciones, así en un futuro podremos actualizar la plantilla padre
+      sin perder nuestras personalizaciones creadas en la plantilla hijo. Solo
+      debemos tocar el código de la plantilla Understrap-child.
+    </p>
+    <p>
+      No es necesario entender y conocer a fondo la plantilla en sí, sino
+      simplemente instalarla. Utilizar los recursos de abajo para saber más
+      sobre los temas.
+    </p>
+    <p>
+      Al final de este punto deberías poder ver una página web WordPress local
+      con el tema base de Understrap-child activado y funcionando:<br />
+      http://localhost
+    </p>
+
+    <p>&nbsp;</p>
+
+    <b>Configurar Custom Post Type en WordPress:</b>
+    <p>
+      Un CPT o Custom Post Type en WordPress es una entidad de datos
+      personalizada sobre la que podemos definir nuevos campos personalizados,
+      aparte de los standard que lleva por defecto (Título, texto, autor, …)
+      <br />
+      Una entrada del blog o una página de WordPress son distintos CPT que
+      vienen por defecto en WordPress.
+    </p>
+    <p>
+      Para crear nuevos CPT, como todo en WordPress, se puede hacer a través de
+      un Plug-in de terceros, o mediante código PHP en el tema instalado, o
+      mediante un Plug-in propio.
+    </p>
+    <p>
+      Para esta prueba podéis utilizar cualquiera de las tres opciones.<br />
+      La más sencilla es utilizar el Plug-in de terceros ACF que te permite
+      generar estos CPT y generar sus campos personalizados.
+    </p>
+    <p>Tienes abajo en recursos documentación de como usar este plug-in.</p>
+
+    <p>&nbsp;</p>
+
+    <b> Crearemos el siguiente CPT con los siguientes campos: </b>
+    <p>
+      <b>Nombre CPT:</b><br />
+      platos
+    </p>
+
+    <p>
+      <b>Campos:</b><br />
+      title: tipo texto, viene por defecto de cualquier CPT, no es necesario
+      crearlo.<br />
+      description: tipo textarea <br />
+      price: tipo número <br />
+      picture: tipo imagen<br />
+    </p>
+
+    <p>
+      Al final de este punto deberías poder introducir platos en el admin de
+      WordPress con los campos creados.
+    </p>
+    <img src="readme_asset_wp_cpt.jpg" alt="Screenshoot de wordpress" />
+
+    <p>
+      <b>Opcional:</b>
+    </p>
+    <p>
+      WordPress tiene lo que llama Taxonomies, que utiliza para que se puedan
+      crear categorías sobre por ejemplo las entradas de los posts del Blog.
+    </p>
+    <p>
+      Del mismo modo que se puede crear CPT’s también se pueden crear categorías
+      personalizadas, Custom Taxonomies.
+    </p>
+
+    <p>
+      Para nuestra prueba podríamos crear categorías de platos como las
+      secciones de una carta.
+    </p>
+
+    <p>
+      Puedes utilizar el mismo plug-in ACF para crear este tipo de categoría que
+      serían las secciones de la carta y que sirvan para categorizar estos
+      nuevos CPT’s platos que acabamos de crear.
+    </p>
+
+    <p>&nbsp;</p>
+
+    <p>
+      <b>Configurar Shortcode en WordPress:</b>
+    </p>
+
+    <p>
+      Los Shortcode’s en WordPress no son más que funciones PHP que definimos y
+      les asignamos un nombre, pueden realizar cualquier acción y lo que
+      devuelve la función será mostrado en la página en que se usa el Shortcode.
+    </p>
+
+    <p>
+      Los Shortcode’s se pueden crear de muchas maneras, abajo encontrarás links
+      con documentación sobre el tema.
+    </p>
+
+    <p>
+      <b>Un ejemplo:</b>
+    </p>
+
+    <p>
+      Usaremos el archivo functions.php del tema para definir nuestro shortcode:
+    </p>
+    <img src="readme_asset_wp_shortcode.jpg" alt="Shortcode función" />
+    <p>
+      Usaremos el código [menu_carta] directamente en la edición visual de
+      nuestra página para invocar la ejecución de esta función y mostrar por
+      pantalla lo que devuelve la función.
+    </p>
+
+    <p>
+      Para nuestra prueba debemos hacer un shortcut que consulte todos los CPT
+      platos y los devuelva en un formato parecido a este:
+    </p>
+    <img
+      src="readme_asset_wp_frontend.jpg"
+      alt="Screenshoot frontend resultado"
+    />
+    <p>
+      Recuerda que el formato debe ser responsive, y se visualice correctamente
+      tanto en desktop como en móvil.
+    </p>
+    <p>
+      Al finalizar este punto deberías tener una página de tu web que utilice el
+      shortcut creado y visualice todos los CPT platos en la página<br />
+      http://localhost/platos
+    </p>
+
+    <p>&nbsp;</p>
+    <hr />
+    <p>&nbsp;</p>
+
+    <h3>RECURSOS</h3>
+
+    <p><b> PHP Entornos de desarrollo local: </b></p>
+
+    <p>
+      WAMP <br />
+      https://www.wampserver.com/en/
+    </p>
+    <p>
+      XAMP <br />
+      https://www.apachefriends.org/es/index.html
+    </p>
+
+    <p>
+      EasyPHP <br />
+      https://www.easyphp.org/es/index.php
+    </p>
+
+    <p>
+      Docker:<br />
+      https://github.com/kodetop/docker-php-mysql
+    </p>
+
+    <p>&nbsp;</p>
+    <p><b> Wordpress </b></p>
+
+    <p>
+      Ayuda instalación:<br />
+      https://developer.wordpress.org/advanced-administration/before-install/howto-install/
+    </p>
+
+    <p>
+      Ayuda general:<br />
+      https://learn.wordpress.org/
+    </p>
+
+    <p>
+      Ayuda para programadores:<br />
+      https://developer.wordpress.org/
+    </p>
+
+    <p>
+      Temas: <br />
+      https://developer.wordpress.org/themes/
+    </p>
+    <p>
+      ShortCodes: <br />
+      https://developer.wordpress.org/plugins/shortcodes/
+    </p>
+
+    <p>
+      Custom Post Types: <br />
+      https://developer.wordpress.org/plugins/post-types/
+    </p>
+    <p>&nbsp;</p>
+    <p><b> Plugin ACF: </b></p>
+
+    <p>
+      https://www.advancedcustomfields.com/resources/<br />
+      https://www.advancedcustomfields.com/downloads/<br />
+    </p>
+
+    <p>&nbsp;</p>
+    <p><b> Wordpress Understrap theme: </b></p>
+    <p>
+      https://github.com/understrap/understrap<br />
+      https://docs.understrap.com/#/<br />
+      https://docs.understrap.com/#/understrap-child/getting-started<br />
+      https://github.com/understrap/understrap-child<br />
+    </p>
+
+    <p>&nbsp;</p>
+    <p><b> Cursos PHP: </b></p>
+    <p>
+      https://www.w3schools.com/php/<br />
+      https://www.youtube.com/watch?v=OK_JCtrrv-c<br />
+      https://www.youtube.com/watch?v=nPCJAx5c1uE<br />
+    </p>
+
+    <p>&nbsp;</p>
+    <p><b> GIT control de versiones: </b></p>
+    <p>
+      https://rogerdudler.github.io/git-guide/index.es.html<br />
+      https://www.freecodecamp.org/espanol/news/guia-para-principiantes-de-git-y-github/<br />
+    </p>
+  </body>
+</html>
