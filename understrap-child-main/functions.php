@@ -92,3 +92,56 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+function my_theme_enqueue_styles() {
+    $parent_style = 'understrap'; 
+
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        array( $parent_style ),
+        wp_get_theme()->get('Version')
+    );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+function menu_carta_func() {
+    ob_start(); 
+
+    $categories = get_categories(array('taxonomy' => 'category'));
+    echo '<div class="menu-cart-container">'; 
+    foreach ($categories as $category) {
+        echo '<div class="category-container">';
+        echo '<h2>' . $category->name . '</h2>';        
+        $args = array(
+            'post_type' => 'carta',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'category',
+                    'field'    => 'id',
+                    'terms'    => $category->term_id,
+                ),
+            ),
+        );
+        $query = new WP_Query($args);
+        if ($query->have_posts()) {
+            echo '<div class="platos-container">'; 
+            while ($query->have_posts()) {
+                $query->the_post();
+                echo '<div class="plato-info">';
+                echo '<h3 class="titulo-plato">' . get_the_title() . '<span class="precio">$ ' . get_post_meta(get_the_ID(), 'price', true) . '</span></h3>';           
+                echo '<p class="Descripcion">' . get_post_meta(get_the_ID(), 'description', true) . '</p>';              
+                echo '</div>';
+            }
+            echo '</div>'; 
+        }
+        echo '</div>'; 
+    }
+    echo '</div>'; 
+    wp_reset_postdata(); 
+    return ob_get_clean(); 
+}
+
+add_shortcode('menu_carta', 'menu_carta_func');
+
+

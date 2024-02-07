@@ -1,14 +1,55 @@
-/*
- Theme Name:   Understrap Child
- Theme URI:    https://understrap.com
- Description:  Understrap Child Theme
- Author:       the Understrap Contributors
- Author URI:   https://github.com/understrap/understrap-child/graphs/contributors
- Template:     understrap
- Version:      1.2.0
- License: GNU General Public License v2 or later
- License URI: http://www.gnu.org/licenses/gpl-2.0.html
- Text Domain:  understrap-child
- Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
- GitHub Theme URI: understrap/understrap-child
-*/
+
+
+.menu-cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #c7c7c7;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;    
+}
+
+.menu-cart-container .category-container {
+    width: 100%;    
+    text-align: center;
+}
+
+.menu-cart-container .platos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.menu-cart-container h2 {
+    margin-top: 0;
+    font-size: 50px;
+    color: #444;
+}
+
+.menu-cart-container .titulo-plato {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.menu-cart-container .Descripcion {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #666;
+    text-align: left;
+    padding-right: 25%;
+}
+
+.menu-cart-container .precio {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #333;
+    float: right;
+}
+
+body {
+    background-color: #eceaea;
+}
