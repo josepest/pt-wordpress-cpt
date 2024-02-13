@@ -108,14 +108,18 @@ function menu_carta_sc() {
 
     if ($platos->have_posts()) {
         while ($platos->have_posts()) {
-            $platos->the_post();
-            $output .= '<div class="plato">';
-            $output .= '<h2>' . get_the_title() . '</h2>';
-            $output .= '<p>' . get_field('description') . '</p>';
-            $output .= '<p>Precio: $' . get_field('price') . '</p>';
-            $output .= '<div class="plato-imagen">' . get_the_post_thumbnail() . '</div>';
-            $output .= '</div>';
-        }
+			//Asigno a variables para mayor facilidad de uso
+			$platos->the_post();
+			$nombre_plato = get_the_title();
+			$descripcion_plato = get_field('description');
+			$precio_plato = get_field('price');
+			
+			//Lo que escribe por pantalla
+			$output .= '<div class="plato">';
+			$output .= '<h2>' . $nombre_plato . ' <span class="precio">$' . $precio_plato . '</span></h2>';
+			$output .= '<p>' . $descripcion_plato . '</p>';
+			$output .= '</div>';
+		}
     } else {
         $output .= 'No se encontraron platos.';
     }
