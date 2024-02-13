@@ -92,3 +92,38 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+/**
+ * Adds menu
+ */
+function menu_carta_sc() {
+    $args = array(
+        'post_type' => 'plato',
+        'posts_per_page' => -1
+    );
+
+    $platos = new WP_Query($args);
+
+    $output = '<div class="plato">';
+
+    if ($platos->have_posts()) {
+        while ($platos->have_posts()) {
+            $platos->the_post();
+            $output .= '<div class="plato">';
+            $output .= '<h2>' . get_the_title() . '</h2>';
+            $output .= '<p>' . get_field('description') . '</p>';
+            $output .= '<p>Precio: $' . get_field('price') . '</p>';
+            $output .= '<div class="plato-imagen">' . get_the_post_thumbnail() . '</div>';
+            $output .= '</div>';
+        }
+    } else {
+        $output .= 'No se encontraron platos.';
+    }
+
+    $output .= '</div>';
+
+    wp_reset_postdata();
+
+    return $output;
+}
+add_shortcode('menu_carta', 'menu_carta_sc');
